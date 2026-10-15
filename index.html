@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account | SmoothSignup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="signup-container">
+      <div class="signup-card">
+        <div class="brand">
+          <div class="brand-icon">S</div>
+          <span>smooth<span class="brand-highlight">.</span></span>
+        </div>
+
+        <div class="progress-section">
+          <div class="progress-info">
+            <span id="step-label">STEP 1 OF 3</span>
+            <span id="progress-percent">33%</span>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="form-content">
+          <div class="welcome-text">
+            <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+            <h1 id="form-title">Create your account</h1>
+            <p id="form-description">Let's get to know you a little better.</p>
+          </div>
+
+          <form id="signup-form" novalidate>
+            <div class="form-step active" data-step="1">
+              <label for="fullname">Full name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="e.g. Nuel James"
+                autocomplete="name"
+                required
+              />
+
+              <p class="error-message" id="name-error"></p>
+
+              <button type="button" class="next-btn">
+                Continue <span>→</span>
+              </button>
+            </div>
+
+            <div class="form-step" data-step="2">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+
+              <p class="error-message" id="email-error"></p>
+
+              <button type="button" class="next-btn">
+                Continue <span>→</span>
+              </button>
+
+              <button type="button" class="back-btn">← Go back</button>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <label for="password">Create password</label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="At least 8 characters"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+
+                <button
+                  type="button"
+                  id="toggle-password"
+                  aria-label="Show password"
+                >
+                  Show
+                </button>
+              </div>
+
+              <p class="error-message" id="password-error"></p>
+
+              <div class="password-hint">Use at least 8 characters.</div>
+
+              <label class="terms-label">
+                <input type="checkbox" id="terms" />
+                <span>I agree to the terms and conditions.</span>
+              </label>
+
+              <p class="error-message" id="terms-error"></p>
+
+              <button type="submit" class="next-btn">
+                Create account <span>→</span>
+              </button>
+
+              <button type="button" class="back-btn">← Go back</button>
+            </div>
+          </form>
+
+          <div class="success-screen" id="success-screen" hidden>
+            <div class="success-icon">✓</div>
+            <h2>You're all set!</h2>
+            <p id="success-message">Your sign-up journey starts now.</p>
+            <button type="button" id="restart-btn" class="next-btn">
+              Start again <span>↻</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="signup-footer">
+          <span>Simple. Secure. Smooth.</span>
+          <span>© 2026 Smooth.</span>
+        </div>
+      </div>
+
+      <div class="side-note">
+        <span class="note-dot"></span>
+        A better experience begins with you.
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
